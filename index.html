@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Group 14 — MaOM</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Sora:wght@500;700;800&family=Noto+Sans+Devanagari:wght@400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- Background: abstract meditation figure (pure shapes) -->
+<div class="bg" aria-hidden="true">
+  <svg viewBox="0 0 800 800" preserveAspectRatio="xMidYMax meet">
+    <defs>
+      <radialGradient id="aura" cx="50%" cy="50%" r="50%">
+        <stop offset="0" stop-color="#ffd9a0" stop-opacity=".55"/>
+        <stop offset=".5" stop-color="#c8a2ff" stop-opacity=".22"/>
+        <stop offset="1" stop-color="#6c63ff" stop-opacity="0"/>
+      </radialGradient>
+      <linearGradient id="body" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#fff" stop-opacity=".55"/>
+        <stop offset="1" stop-color="#cdb8ff" stop-opacity=".25"/>
+      </linearGradient>
+    </defs>
+    <circle class="pulse" cx="400" cy="400" r="330" fill="url(#aura)"/>
+    <g fill="none" stroke="#fff" stroke-opacity=".22" stroke-width="1.5">
+      <circle class="ring r1" cx="400" cy="400" r="200"/>
+      <circle class="ring r2" cx="400" cy="400" r="265"/>
+      <circle class="ring r3" cx="400" cy="400" r="330" stroke-dasharray="3 12"/>
+    </g>
+    <g class="breathe">
+      <g fill="url(#body)" stroke="#fff" stroke-opacity=".35" stroke-width="1.5">
+        <circle cx="400" cy="250" r="44"/>
+        <path d="M400 305C350 305 330 345 325 420C322 470 340 500 400 505C460 500 478 470 475 420C470 345 450 305 400 305Z"/>
+        <path d="M225 565C225 512 300 492 400 497C500 492 575 512 575 565C575 605 500 620 400 620C300 620 225 605 225 565Z"/>
+      </g>
+      <g fill="none" stroke="url(#body)" stroke-width="26" stroke-linecap="round">
+        <path d="M348 335C305 400 275 470 268 535"/>
+        <path d="M452 335C495 400 525 470 532 535"/>
+      </g>
+      <circle cx="266" cy="542" r="15" fill="#fff" fill-opacity=".4"/>
+      <circle cx="534" cy="542" r="15" fill="#fff" fill-opacity=".4"/>
+      <g fill="#fff" fill-opacity=".14" stroke="#fff" stroke-opacity=".3">
+        <ellipse cx="400" cy="660" rx="38" ry="90" transform="rotate(0 400 640)"/>
+        <ellipse cx="400" cy="660" rx="38" ry="90" transform="rotate(-40 400 625)"/>
+        <ellipse cx="400" cy="660" rx="38" ry="90" transform="rotate(40 400 625)"/>
+        <ellipse cx="400" cy="660" rx="38" ry="90" transform="rotate(-75 400 625)"/>
+        <ellipse cx="400" cy="660" rx="38" ry="90" transform="rotate(75 400 625)"/>
+      </g>
+    </g>
+  </svg>
+</div>
+<div class="om-layer" id="om-layer" aria-hidden="true"></div>
+<header class="top glass">
+  <img src="assets/amritalogo.png" alt="Amrita Vishwa Vidyapeetham logo" class="logo">
+  <p>Amrita Vishwa Vidyapeetham, Coimbatore</p>
+</header>
+
+<main>
+  <section class="hero">
+    <p class="kicker">Team project archive</p>
+    <h1>Group 14<span>MaOM</span></h1>
+    <p class="sub">CSE-H &middot; Mastery Over Mind</p>
+  </section>
+
+  <section id="projects" aria-labelledby="ph">
+    <h2 id="ph">All Projects</h2>
+    <div id="grid" class="grid"><p class="note">Loading projects…</p></div>
+  </section>
+
+  <section id="team" aria-labelledby="th">
+    <h2 id="th">Team details</h2>
+    <ul id="team-list" class="team"><li class="note">Loading team…</li></ul>
+  </section>
+</main>
+
+<footer class="glass">Group 14 &middot; MaOM &middot; CSE-H</footer>
+
+<dialog id="viewer" class="glass">
+  <button id="close" aria-label="Close">✕</button>
+  <img id="viewer-img" alt="">
+  <div class="cap"><h3 id="viewer-title"></h3><p id="viewer-desc"></p><a id="viewer-link" hidden target="_blank" rel="noopener">Open project</a></div>
+</dialog>
+<script src="script.js"></script>
+</body>
+</html>
